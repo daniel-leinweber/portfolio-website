@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --terminal-color: red;
+}
+
+body {
+    font-family: 'Source Code Pro', monospace, sans-serif;
+    background-color: #333;
+    color: #ccc;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+h1 {
+    color: var(--terminal-color);
+    font-size: 50px;
+    letter-spacing: -4px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--terminal-color);
+    letter-spacing: -2px;
+}
+
+h3, h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: var(--terminal-color);
+    text-decoration: none;
+}
+
+p {
+    margin: 20px 0;
+}
+
+nav {
+    margin: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    color: var(--terminal-color);
+    cursor: pointer;
+    margin: 1em;
+}
+
+footer {
+    font-size: 12px;
+    float: right;
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+
+#skills-content h3 {
+    margin-top: 20px;
+}
+
+#skills-content ul {
+    max-width: 500px;
+}
+
+#skills-content ul li {
+    display: flex;
+    justify-content: space-between;
+}
+
+#contact-content ul {
+    display: flex;
+    justify-content: stretch;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#profile-image {
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    border-radius: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wb-body {
+    background: #111;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.box {
+    margin-left: 1em;
+}
+
+.cursor {
+    font-weight: 700;
+    animation: 1.2s blink step-end infinite;
+}
+
+@keyframes blink {
+    from,
+    to {
+        color: transparent;
+    }
+    50% {
+        color: var(--terminal-color);
+    }
+}
