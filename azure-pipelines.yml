@@ -14,7 +14,7 @@ steps:
   inputs:
     credentialsOption: 'serviceEndpoint'
     serverEndpoint: 'maxdecor FTP'
-    rootDirectory: '$(Build.ArtifactStagingDirectory)'
+    rootDirectory: '$(Build.ArtifactStagingDirectory)/src'
     filePatterns: '**'
     remoteDirectory: '/htdocs/portfolio_daniel'
     clean: false
