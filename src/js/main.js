@@ -5,6 +5,9 @@ const aboutContent = document.querySelector('#about-content');
 const skillsContent = document.querySelector('#skills-content');
 const contactContent = document.querySelector('#contact-content');
 
+const yearsOfExperience = document.querySelector('#yearsOfExperience');
+yearsOfExperience.innerHTML = new Date(Date.now()).getFullYear() - new Date("2010/01/01").getFullYear();
+
 const terminalColor = getComputedStyle(document.documentElement).getPropertyValue('--terminal-color');
 const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
