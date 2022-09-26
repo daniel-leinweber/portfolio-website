@@ -1,0 +1,28 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: CopyFiles@2  
+  inputs:
+    Contents: |
+      **
+      !**\.git\**
+      !README.md
+      !.gitignore
+      !db/**/*
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    CleanTargetFolder: true
+- task: FtpUpload@2
+  inputs:
+    credentialsOption: 'serviceEndpoint'
+    serverEndpoint: 'maxdecor FTP'
+    rootDirectory: '$(Build.ArtifactStagingDirectory)'
+    filePatterns: '**'
+    remoteDirectory: '/htdocs/portfolio_daniel'
+    clean: false
+    cleanContents: false
+    preservePaths: true
+    trustSSL: true
