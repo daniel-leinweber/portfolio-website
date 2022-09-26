@@ -8,7 +8,7 @@ steps:
 - task: CopyFiles@2  
   inputs:
     Contents: |
-      **
+      src/**
       !**\.git\**
       !README.md
       !.gitignore
