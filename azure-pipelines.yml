@@ -7,12 +7,7 @@ pool:
 steps:
 - task: CopyFiles@2  
   inputs:
-    Contents: |
-      src/**
-      !**\.git\**
-      !README.md
-      !.gitignore
-      !db/**/*
+    Contents: 'src/**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
     CleanTargetFolder: true
 - task: FtpUpload@2
